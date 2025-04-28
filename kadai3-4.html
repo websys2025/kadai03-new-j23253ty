@@ -34,7 +34,7 @@
             function buyItem(no) {
                 // ここにコードを書く
                 lookid=no-1;
-                if (lookid<=items.length||lookid>=0){
+                if (lookid<items.length||lookid>=0){
                     console.log("商品番号:"+items[lookid].id+",商品名："+items[lookid].name+"を購入します。");
                     if(items[lookid].stock>0){
                         items[lookid].stock -= 1;
