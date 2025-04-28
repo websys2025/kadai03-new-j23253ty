@@ -33,6 +33,16 @@
             // 商品購入の関数
             function buyItem(no) {
                 // ここにコードを書く
+                lookid=no-1;
+                console.log("商品番号:"+items[lookid].id+",商品名："+items[lookid].name+"を購入します。");
+                if (lookid<items.length){
+                    if(items[lookid].stock>0){
+                        items[lookid].stock -= 1;
+                    }else{
+                        console.log("在庫がありません。");
+                    }
+                }else{
+                    console.log("ID:"+no+"は有効な値ではありません。"+"1~"+items.length+"で指定してください。");
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
 
